@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+/* Variables */
+:root {
+	--primary: #563588;
+    --personal: var(--primary);
+	--business: #3a82ee;	
+    --educational: #8000ff;
+    --financial: #00ff80;
+    --work: #00bfff;
+    --home: #808080;
+    --health-and-fitness: #39004d;
+    --travel: #4d2600;
+    --creative: #ff8000;
+	--light: #EEE;
+	--grey: #888;
+	--dark: #313154;
+	--danger: #ff5b57;
+
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    --personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+	--educational-glow: 0px 0px 4px rgba(128, 0, 255, 0.75);
+	--financial-glow: 0px 0px 4px rgba(0, 255, 128, 0.75);
+	--work-glow: 0px 0px 4px rgba(0, 191, 255, 0.75);
+	--home-glow: 0px 0px 4px rgba(128, 128, 128, 0.75);
+	--health-and-fitness-glow: 0px 0px 4px rgba(57, 0, 77, 0.75);
+	--travel-glow: 0px 0px 4px rgba(77, 38, 0, 0.75);
+	--creative-glow: 0px 0px 4px rgba(255, 128, 0.75);
+	
+}
+/* End of Variables */
+
+/* Resets */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'montserrat', sans-serif;
+}
+
+.header {
+    padding-top: 1.5rem;
+    padding-bottom: 1.2rem;
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 100;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-header {
+    background-color: #FFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 120px;
+    height: 100px;
+    margin-left: 400px;
+}
+
+.name {
+    font-size: 20px;
+    font-family: var(--font-body);
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+}
+/* End of Resets */
+
+body {
+	background: var(--light);
+	color: var(--dark);
+}
+
+section {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+h3 {
+	color: var(--dark);
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 0.5rem;
+}
+
+h4 {
+	color: var(--grey);
+	font-size: 0.875rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.intro .title {
+	display: flex;
+}
+
+.intro .title input {
+	margin-left: 0.5rem;
+	max-width: 30%;
+}
+
+.intro .title, 
+.intro .title input {
+	color: var(--dark);
+	font-size: 1.5rem;
+	font-weight: 700;    
+}
+
+.categories h3{
+	font-weight: 600;
+	font-size: 18px;
+}
+.categories input[type="text"] {
+	display: flex;
+	width: 50%;
+    align-items: center;
+    justify-content: center;
+	font-size: 1.125rem;
+	padding: 1rem 1.5rem;
+	color: var(--dark);
+	background-color: #FFF;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	margin-bottom: 1.5rem;
+}
+
+.categories .options {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+	grid-gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.categories .options label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #FFF;
+	padding: 1.5rem;
+	box-shadow: var(--shadow);
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	display: none;
+}
+
+.tasks {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 999px;
+	border: 2px solid var(--business);
+	box-shadow: var(--business-glow);
+}
+
+.tasks.personal{
+	border-color: var(--personal);
+	box-shadow: var(--personal-glow);
+}
+
+.tasks.business{
+	border-color: var(--business);
+	box-shadow: var(--business-glow);
+}
+
+.tasks.educational{
+	border-color: var(--educational);
+	box-shadow: var(--educational-glow);
+}
+
+.tasks.financial{
+	border-color: var(--financial);
+	box-shadow: var(--financial-glow);
+}
+
+.tasks.work{
+	border-color: var(--work);
+	box-shadow: var(--work-glow);
+}
+
+.tasks.home{
+	border-color: var(--home);
+	box-shadow: var(--home-glow);
+}
+
+.tasks.health-and-fitness{
+	border-color: var(--health-and-fitness);
+	box-shadow: var(--health-and-fitness-glow);
+}
+
+.tasks.travel{
+	border-color: var(--travel);
+	box-shadow: var(--travel-glow);
+}
+
+.tasks.creative{
+	border-color: var(--creative);
+	box-shadow: var(--creative-glow);
+}
+
+.tasks::after {
+	content: '';
+	display: block;
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+	background-color: var(--business);
+	box-shadow: var(--business-glow);
+	border-radius: 999px;
+	transition: 0.2s ease-in-out;
+}
+
+.tasks.personal::after {
+	background-color: var(--personal);
+	box-shadow: var(--personal-glow);
+}
+
+input:checked ~ .tasks::after {
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+}
+
+.categories .options label div {
+	color: var(--dark);
+	font-size: 1.125rem;
+	margin-top: 1rem;
+}
+
+.categories input[type="submit"] {
+	display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+	width: 20%;
+	font-size: 1.125rem;
+	padding: 1rem 1.5rem;
+	color: #FFF;
+	font-weight: 700;
+	text-transform: uppercase;
+	background-color: var(--primary);
+	box-shadow: var(--personal-glow);
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: 0.2s ease-out;
+}
+
+.categories input[type="submit"]:hover {
+	opacity: 0.75;   
+    
+}
+
+.tasks-submit{
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.day-canvas{
+	width: 100%;
+	height: auto;
+	background-color: var(--grey);
+	padding: 0.5rem 0;	
+}
+
+.day-canvas h3{
+	font-size: 20px;
+	font-weight: 700;
+	margin-left: 15px;
+}
+
+.todo-list h3{
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.todo-list .list {
+	margin: 1rem 0;
+}
+
+.todo-list .todo-item {
+	display: flex;
+	align-items: center;
+	margin-left: 10px;
+	background-color: #FFF;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	margin-bottom: 1rem;
+    width: 50%;
+}
+
+.todo-item label {
+	display: block;
+	margin-right: 1rem;
+	cursor: pointer;
+}
+
+.todo-item .todo-content {
+	flex: 1 1 0%;
+}
+
+.todo-item .todo-content input {
+	color: var(--dark);
+	font-size: 1.125rem;
+}
+
+.todo-item .actions {
+	display: flex;
+	align-items: center;
+}
+
+.todo-item .actions button {
+	display: block;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	color: #FFF;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.todo-item .actions button:hover {
+	opacity: 0.75;
+}
+
+.todo-item .actions .edit {
+	margin-right: 0.5rem;
+	background-color: var(--primary);
+}
+
+.todo-item .actions .delete {
+	background-color: var(--danger);
+}
+
+.todo-item.done .todo-content input {
+	text-decoration: line-through;
+	color: var(--grey);
+   
+}

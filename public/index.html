@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLAN YOUR DAY</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/do-it-logo.png" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="logo">
+        <img src="images/do-it-logo.png" />
+      </div>
+      <div class="name">
+        <h2>PLAN YOUR DAY</h2>
+      </div>
+    </header>
+    <main class="app">  
+
+      <section class="categories">
+        <h3>CREATE YOUR TODO</h3>
+
+        <form id="new-to-do-form">
+          <section class="intro">
+            <h2 class="title">
+             <p>Hello there: </p>
+              <input type="text" id="title" name="title" placeholder="Insert name" />
+            </h2>
+          </section>
+          <h4>What's on your to-do?</h4>
+          <input
+            type="text"
+            name="content"
+            id="content"
+            placeholder="eg: Go shopping"
+          />
+
+          <h4>Choose a Category</h4>
+          <div class="options">
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category1"
+                value="personal"
+              />
+              <span class="tasks personal"></span>
+              <div>Personal</div>
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category2"
+                value="business"
+              />
+              <span class="tasks business"></span>
+              <div>Business</div>
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category3"
+                value="educational"
+              />
+              <span class="tasks educational"></span>
+              <div>Educational</div>
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category4"
+                value="financial"
+              />
+              <span class="tasks financial"></span>
+              <div>Financial</div>
+            </label>
+
+            <label>
+              <input type="radio" name="category" id="category5" value="work" />
+              <span class="tasks work"></span>
+              <div>Work</div>
+            </label>
+
+            <label>
+              <input type="radio" name="category" id="category6" value="home" />
+              <span class="tasks home"></span>
+              <div>Home</div>
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category7"
+                value="health and fitness"
+              />
+              <span class="tasks health and fitness"></span>
+              <div>Health and Fitness</div>
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category8"
+                value="travel"
+              />
+              <span class="tasks travel"></span>
+              <div>Travel</div>
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category9"
+                value="creative"
+              />
+              <span class="tasks creative"></span>
+              <div>Creative</div>
+            </label>
+          </div>
+          <div class="tasks-submit">
+            <input type="submit" value="Add todo" />
+          </div>
+        </form>
+      </section>
+
+      <section class="todo-list">        
+        <h3>TODO LIST</h3>
+        <div id="todo-list">
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
